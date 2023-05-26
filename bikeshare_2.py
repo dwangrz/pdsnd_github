@@ -91,7 +91,6 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-
     popular_month = df['month'].mode()[0]
 
     popular_month_count = df[df['month'] == popular_month].shape[0]
@@ -139,7 +138,6 @@ def station_stats(df):
 
 
     # display most frequent combination of start station and end station trip
-
     print('\ndisplay most frequent combination of start station and end station trip...\n')
 
     popular_start_end_station = df[['Start Station', 'End Station']].mode().iloc[0]
@@ -181,7 +179,6 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-
     print('\nCalculating User types:\n')
 
     user_types = df['User Type'].dropna().unique()
