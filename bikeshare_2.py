@@ -1,7 +1,6 @@
 import time
 import pandas as pd
 import numpy as np
-from IPython.display import display
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -185,7 +184,7 @@ def user_stats(df):
     user_types = df['User Type'].dropna().unique()
 
     for type in  user_types:
-        print('{}, Count: {}'.format(type, df.loc[df['User Type'] == type].shape[0]))
+        print('\n{}, Count: {}'.format(type, df.loc[df['User Type'] == type].shape[0]))
 
 
     # Display counts of gender
@@ -199,7 +198,7 @@ def user_stats(df):
         print("\nColumn 'Gender' does not exist in dataFrame\n")
 
     for gender in genders:
-        print('{}, Count: {}'.format(gender, df.loc[df['Gender'] == gender].shape[0]))
+        print('\n{}, Count: {}'.format(gender, df.loc[df['Gender'] == gender].shape[0]))
 
 
 
@@ -211,7 +210,7 @@ def user_stats(df):
         birth_year_min = birth_year.min()
         birth_year_max = birth_year.max()
         birth_year_most_common = birth_year.mode()[0]
-        print("The most earlist year of birth: {} \nThe most recent year of birth: {} \nThe most most common year of birth: {}".format(birth_year_min, birth_year_max, birth_year_most_common))
+        print("\nThe most earlist year of birth: {} \nThe most recent year of birth: {} \nThe most most common year of birth: {}".format(birth_year_min, birth_year_max, birth_year_most_common))
     else:
         print("\nColumn 'Birth Year' does not exist in dataFrame\n")
 
